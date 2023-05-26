@@ -12,17 +12,16 @@ def read_root():
 @app.get("/customer/{customer_id}")
 def read_id(customer_id: int):
     # Charger le dataframe
-    df = pd.read_csv('df_sample.csv', index_col=0, header=0)
-    return df.shape
+    df = pd.read_csv('./df_sample.csv', index_col=0, header=0)
     # Choisir le bon client
-    #df = df.loc[df['SK_ID_CURR'] == customer_id]
-    #feats = [f for f in df.columns if f not in ['TARGET','SK_ID_CURR','SK_ID_BUREAU','SK_ID_PREV','index']]
-    #X = df[feats]
+    df = df.loc[df['SK_ID_CURR'] == customer_id]
+    feats = [f for f in df.columns if f not in ['TARGET','SK_ID_CURR','SK_ID_BUREAU','SK_ID_PREV','index']]
+    X = df[feats]
     # importer le modèle
     #model_uri = "file:///C:/Users/LN6428/Documents/P7/OC-P7/mlruns/222107729629896078/f374711e229f4188a406d396f2080269/artifacts/model"
-    #model_uri = "./model"
-    #loaded_model = mlflow.sklearn.load_model(model_uri)
+    model_uri = "./model"
+    loaded_model = mlflow.sklearn.load_model(model_uri)
     # Calculer le score
-    #score = loaded_model.predict_proba(X)
-    #response = score[0][1]
-    #return response
+    score = loaded_model.predict_proba(X)
+    response = score[0][1]
+    return response
