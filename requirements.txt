@@ -1,6 +1,6 @@
 pandas
 fastapi
 uvicorn
-guvicorn
+gunicorn
 uvloop
 httptools
