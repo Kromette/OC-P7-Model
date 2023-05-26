@@ -12,7 +12,8 @@ def read_root():
 @app.get("/customer/{customer_id}")
 def read_id(customer_id: int):
     # Charger le dataframe
-    df = pd.read_csv(r'df_sample.csv', index_col=0, encoding='utf-8')
+    filepath = 'df_sample.csv'
+    df = pd.read_csv(filepath, index_col=0, encoding='utf-8')
     # Choisir le bon client
     df = df.loc[df['SK_ID_CURR'] == customer_id]
     feats = [f for f in df.columns if f not in ['TARGET','SK_ID_CURR','SK_ID_BUREAU','SK_ID_PREV','index']]
