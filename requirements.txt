@@ -1,6 +1,6 @@
 pandas
 fastapi
 uvicorn
-guvicorn==19.9.0
+guvicorn
 uvloop
 httptools
