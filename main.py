@@ -20,7 +20,6 @@ def read_id(customer_id: int):
     feats = [f for f in df.columns if f not in ['TARGET','SK_ID_CURR','SK_ID_BUREAU','SK_ID_PREV','index']]
     X = df[feats]
     # importer le modèle
-    #model_uri = "file:///C:/Users/LN6428/Documents/P7/OC-P7/mlruns/222107729629896078/f374711e229f4188a406d396f2080269/artifacts/model"
     model_uri = "models:/Best_model_mini/1"
     loaded_model = mlflow.sklearn.load_model(model_uri)
     # Calculer le score
