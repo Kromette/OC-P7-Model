@@ -2,6 +2,7 @@ import pandas as pd
 from fastapi import FastAPI
 #import mlflow
 import joblib
+import lightgbm
 
 app = FastAPI()
 
