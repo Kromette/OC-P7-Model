@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/LN6428/Documents/P7/OC-P7/mlruns/270640015254631432/4a8c3648380c476981d29b71a07a63dc/artifacts
+end_time: 1685166380294
+entry_point_name: ''
+experiment_id: '270640015254631432'
+lifecycle_stage: active
+run_id: 4a8c3648380c476981d29b71a07a63dc
+run_name: test
+run_uuid: 4a8c3648380c476981d29b71a07a63dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685166376680
+status: 3
+tags: []
+user_id: LN6428
