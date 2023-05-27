@@ -1,6 +1,7 @@
 import pandas as pd
 from fastapi import FastAPI
 import mlflow
+import model
 
 app = FastAPI()
 
@@ -21,7 +22,7 @@ def read_id(customer_id: int):
     X = df[feats]
     # importer le modèle
     #model_uri = "file:///C:/Users/LN6428/Documents/P7/OC-P7/mlruns/222107729629896078/f374711e229f4188a406d396f2080269/artifacts/model"
-    model_uri = "https://github.com/Kromette/OC-P7-Model/tree/0e0175a374307de09c292662f110865cac554840/model"
+    model_uri = "/model"
     loaded_model = mlflow.sklearn.load_model(model_uri)
     # Calculer le score
     score = loaded_model.predict_proba(X)
