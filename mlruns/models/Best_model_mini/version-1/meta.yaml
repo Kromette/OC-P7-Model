@@ -5,7 +5,7 @@ last_updated_timestamp: 1685174347847
 name: Best_model_mini
 run_id: f9cf1b9923564e9a92267bc9d35b8468
 run_link: ''
-source: file:///C:/Users/LN6428/Documents/P7/OC-P7/mlruns/270640015254631432/f9cf1b9923564e9a92267bc9d35b8468/artifacts/model
+source: /mlruns/270640015254631432/f9cf1b9923564e9a92267bc9d35b8468/artifacts/model
 status: READY
 status_message: null
 user_id: null
