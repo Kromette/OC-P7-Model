@@ -13,7 +13,7 @@ def read_root():
 def read_id(customer_id: int):
     # Charger le dataframe
     #filepath = 'df_sample.csv'
-    url = "https://media.githubusercontent.com/media/Kromette/OC-P7-Model/main/df_sample.csv"
+    url = "https://media.githubusercontent.com/media/Kromette/OC-P7-Model/main/df_small.csv"
     df = pd.read_csv(url, index_col=0, encoding='utf-8')
     # Choisir le bon client
     df = df.loc[df['SK_ID_CURR'] == customer_id]
